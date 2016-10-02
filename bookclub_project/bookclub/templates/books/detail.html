@@ -8,5 +8,7 @@
 	<li>{{ book.description }}</li>
     <li>{{ book.author.first_name }} {{ book.author.surname }}</li>
 </ul>
-
+{% if book.cover_image %}
+	<img src="{{ book.cover_image.url }}">
+{% endif %}
 {% endblock content %}

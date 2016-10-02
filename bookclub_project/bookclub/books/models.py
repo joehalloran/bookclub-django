@@ -33,6 +33,7 @@ class Book(models.Model):
     pub_date = models.DateTimeField('date published')
     age_recommendation = models.ForeignKey(AgeRecommendation)
     genre = models.ForeignKey(Genre)
+    cover_image = models.ImageField(null=True, upload_to="covers/")
 
     def __str__(self):
         return self.title
